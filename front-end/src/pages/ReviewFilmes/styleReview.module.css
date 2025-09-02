@@ -69,6 +69,7 @@
 @media (max-width: 600px) {
     #videoTrailer {
         width: 80vw;
+        height: 25vh;
     }
 }
 
