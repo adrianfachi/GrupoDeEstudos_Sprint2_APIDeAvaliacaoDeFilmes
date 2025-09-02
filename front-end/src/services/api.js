@@ -1,7 +1,9 @@
 import axios from "axios"
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 const api = axios.create({
-    baseURL: "grupo-de-estudos-sprint2-api-de-ava-nine.vercel.app"
+    baseURL: API_URL
 })
 
 export default api
