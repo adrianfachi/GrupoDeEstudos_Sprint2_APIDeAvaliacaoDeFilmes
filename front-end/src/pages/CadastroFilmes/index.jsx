@@ -33,6 +33,10 @@ function CadastrarFilme() {
                     linkCapa: linkCapa.current.value,
                     reviews: []
                 })
+                nomeValue.current.value = ""
+                generoValue.current.value = ""
+                linkTrailer.current.value = ""
+                linkCapa.current.value = ""
             }
         } catch (error) {
             console.log(error)
