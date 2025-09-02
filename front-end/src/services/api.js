@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const api = axios.create({
-    baseURL: "https://grupodeestudos-sprint2.onrender.com"
+    baseURL: "http://grupo-de-estudos-sprint2-api-de-ava-sigma.vercel.app"
 })
 
 export default api
