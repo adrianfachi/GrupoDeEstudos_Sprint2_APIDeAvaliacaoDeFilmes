@@ -21,6 +21,7 @@ function CadastrarFilme() {
     const generoValue = useRef();
     const linkTrailer = useRef();
     const linkCapa = useRef();
+    const popup = useRef()
 
     async function enviarInfo(event) {
         event.preventDefault();
@@ -37,6 +38,7 @@ function CadastrarFilme() {
                 generoValue.current.value = ""
                 linkTrailer.current.value = ""
                 linkCapa.current.value = ""
+                ativaPopup("Filme adicionado com sucesso!")
             }
         } catch (error) {
             console.log(error)
@@ -55,7 +57,7 @@ function CadastrarFilme() {
             if(!existe) {
                 return true
             } else {
-                alert("Esse filme ja foi adicionado!")
+                ativaPopup("Esse filme ja existe")
                 return false
             }
             
@@ -72,8 +74,25 @@ function CadastrarFilme() {
         }
     }
 
+    function ativaPopup (valor) {
+        popup.current.innerHTML = valor
+
+        if (valor == "Filme adicionado com sucesso!") {
+            popup.current.style.backgroundColor =  "rgb(197, 255, 197)";
+        } else {
+            popup.current.style.backgroundColor =  "rgba(255, 197, 197, 1)";
+        }
+
+        popup.current.className = (styles.popupAtivo);
+
+        setTimeout(() => {
+            popup.current.className = (styles.popup);
+        }, 5000);
+    }
+
     return (
         <div id={styles.principal}>
+            <div ref={popup} className={styles.popup}></div>
             <h2 id={styles.titulo}>Cadastrar Filme</h2>
             <form id={styles.formulario} onSubmit={enviarInfo}>
                 <input ref={nomeValue} className={styles.info} placeholder="Nome" type="text"/>
