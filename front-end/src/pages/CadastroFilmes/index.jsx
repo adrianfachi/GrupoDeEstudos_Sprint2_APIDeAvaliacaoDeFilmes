@@ -23,6 +23,7 @@ function CadastrarFilme() {
     const linkCapa = useRef();
 
     async function enviarInfo(event) {
+        event.preventDefault();
         try {
             if(validaNome() && validaGenero()) {
                 await api.post("/filmes", {
@@ -32,8 +33,6 @@ function CadastrarFilme() {
                     linkCapa: linkCapa.current.value,
                     reviews: []
                 })
-            } else {
-                event.preventDefault()
             }
         } catch (error) {
             console.log(error)
