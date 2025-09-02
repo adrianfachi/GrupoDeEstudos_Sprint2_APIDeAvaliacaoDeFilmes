@@ -26,7 +26,7 @@ function CadastrarFilme() {
     async function enviarInfo(event) {
         event.preventDefault();
         try {
-            if(validaNome() && validaGenero()) {
+            if(validaNome() && validaGenero() && validaLinkTrailer() && validaLinkCapa()) {
                 await api.post("/filmes", {
                     nome: nomeValue.current.value,
                     genero: generoValue.current.value,
@@ -71,6 +71,24 @@ function CadastrarFilme() {
         } else {
             generoValue.current.style.border = 'none'
             return true
+        }
+    }
+
+    function validaLinkTrailer() {
+        if (linkTrailer.current.value.includes("https://www.youtube.com/watch?v=") || linkTrailer.current.value.includes("https://youtu.be/") || linkTrailer.current.value === "") {
+            return true
+        } else {
+            ativaPopup("Link do trailer deve ser do youtube!")
+            return false
+        }
+    }
+
+    function validaLinkCapa() {
+        if (linkCapa.current.value.includes(".jpg") || linkCapa.current.value === "") {
+            return true
+        } else {
+            ativaPopup("Link da capa deve ser .jpg!")
+            return false
         }
     }
 

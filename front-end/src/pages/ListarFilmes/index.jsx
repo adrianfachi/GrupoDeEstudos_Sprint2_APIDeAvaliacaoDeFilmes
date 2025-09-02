@@ -13,7 +13,6 @@ function ListarFilmes() {
         async function carregaFilmes() {
             const { data:res } = await api.get('/filmes')
             setFilmes(res)
-            console.log(res)
         }
         carregaFilmes()
 

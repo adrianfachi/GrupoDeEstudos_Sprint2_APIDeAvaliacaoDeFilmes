@@ -81,7 +81,10 @@ function reviewsFilmes() {
         try {
             if(filme.linkTrailer != undefined) {
                 const URLWatch = filme.linkTrailer
-                return URLWatch.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/")
+                return URLWatch
+                    .replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/")
+                    .replace("https://youtu.be/", "https://www.youtube.com/embed/")
+                    .split("?")[0]; 
             } else {
                 return false
             }
