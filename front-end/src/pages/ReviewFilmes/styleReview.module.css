@@ -4,18 +4,22 @@
 }
 
 #principal {
+    min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    padding: 20px;
     gap: 20px;
+    background-color: #101010;
 }
 
 #titulo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+    gap: 10px;
 }
 
 #formulario {
@@ -23,8 +27,9 @@
     flex-direction: column;
     gap: 15px;
     padding: 30px;
-    background-color: #d4cfff;
+    background-color: #1a1a1a;
     border-radius: 30px;
+    color: white;
     div {
         display: flex;
         flex-direction: row;
@@ -37,6 +42,15 @@
         border-radius: 20px;
         border: none;
         padding: 10px;
+        background-color: #3d3d3d;
+    }
+
+    #nota {
+        border-radius: 10px;
+    }
+
+    #adicionar {
+        background-color: rgb(118, 118, 255);
     }
 }
 
@@ -47,13 +61,15 @@
     gap: 20px;
     padding: 0;
     list-style-type: none;
+    
 }
 
 .review{
-    background-color: #dad5ff;
+    background-color: #3d3d3d;
     width: 200px;
     padding: 10px;
     border-radius: 20px;
+    color: white;
 }
 
 #link {
@@ -64,6 +80,10 @@
 #videoTrailer {
     width: 40vw;
     height: 40vh;
+}
+
+.semReviews {
+    color: white;
 }
 
 @media (max-width: 600px) {

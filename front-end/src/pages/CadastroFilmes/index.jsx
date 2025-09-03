@@ -47,10 +47,9 @@ function CadastrarFilme() {
 
     function validaNome() {
         if(nomeValue.current.value === "") {
-            nomeValue.current.style.border = 'solid red'
+            ativaPopup("O filme deve ter um nome")
             return false
         } else {
-            nomeValue.current.style.border = 'none'
             const existe = filmes?.some(
                 filme => filme.nome.toLowerCase() === nomeValue.current.value.toLowerCase()
             )
@@ -66,10 +65,9 @@ function CadastrarFilme() {
 
     function validaGenero() {
         if(generoValue.current.value === "") {
-            generoValue.current.style.border = 'solid red'
+            ativaPopup("O filme deve ter um gênero")
             return false
         } else {
-            generoValue.current.style.border = 'none'
             return true
         }
     }
@@ -97,8 +95,11 @@ function CadastrarFilme() {
 
         if (valor == "Filme adicionado com sucesso!") {
             popup.current.style.backgroundColor =  "rgb(197, 255, 197)";
+            popup.current.style.color =  "rgba(0, 255, 0, 1)";
+
         } else {
-            popup.current.style.backgroundColor =  "rgba(255, 197, 197, 1)";
+            popup.current.style.backgroundColor =  "rgba(255, 158, 158, 1)";
+            popup.current.style.color = "rgba(255, 0, 0, 1)"
         }
 
         popup.current.className = (styles.popupAtivo);

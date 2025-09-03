@@ -74,7 +74,7 @@ function ListarFilmes() {
                         </li>
                     ))
                 ) : (
-                    <p>Nenhum filme encontrado</p>
+                    <p id={styles.nenhumFilme}>Nenhum filme encontrado</p>
                 )}
             </ul>
         </div>  

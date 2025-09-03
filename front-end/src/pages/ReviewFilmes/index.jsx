@@ -140,12 +140,12 @@ function reviewsFilmes() {
                             
                         )
                     )) : (
-                        <p>Sem reviews ainda</p>
+                        <p className={styles.semReviews}>Sem reviews ainda</p>
                     )}
                     </ul>
                 </>
             ):(
-                <p>filme não encontrado</p>
+                <p className={styles.semReviews}>filme não encontrado</p>
             )}
             
         </div>
