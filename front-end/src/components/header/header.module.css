@@ -1,14 +1,12 @@
 #header {
     position: fixed;
-    width: 100vw;
+    width: 97vw;
     color: white;
     background-color: #1a1a1a;
     display: flex;
     flex-direction: row;
     padding: 30px;
     justify-content: space-around;
-    top: 50%;
-    left: 50%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -30,5 +28,6 @@
         align-items: center;
         padding-left: 0;
         gap: 10px;
+        text-align: center;
     }
 }
