@@ -97,7 +97,6 @@ function reviewsFilmes() {
         <div id={styles.principal}>
             {filme ? (
                 <>
-                    <Link to={"/"} id={styles.link}>Voltar</Link>
                     <div id={styles.titulo}>
                         <h1>{filme.nome}</h1>
                         <p id={styles.genero}>{filme.genero}</p>
