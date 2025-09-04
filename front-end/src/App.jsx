@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes} from "react-router-dom"
+import Header  from "./components/header/header"
 import ListarFilmes from "./pages/ListarFilmes"
 import CadastrarFilme from "./pages/CadastroFilmes"
 import ReviewsFilmes from "./pages/ReviewFilmes"
@@ -7,8 +8,8 @@ function App() {
 
   return (
     <div>
-
       <BrowserRouter>
+      <Header/>
         <Routes> 
           <Route path="/" element={<ListarFilmes/>}/>
           <Route path="/cadastro" element={<CadastrarFilme/>}/>

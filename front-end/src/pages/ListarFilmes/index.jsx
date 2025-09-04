@@ -46,7 +46,6 @@ function ListarFilmes() {
     return (
         <div id={styles.principal}>
             <h1>Lista de filmes</h1>
-            <Link to="/cadastro" id={styles.link}>Cadastrar novo filme</Link>
             <input type="text" placeholder="Pesquisar..." id={styles.pesquisa} onChange={(e) => setPesquisaTermo(e.target.value)}/>
             <ul id={styles.lista}>
                 {procuraFilme && procuraFilme.length > 0 ? (
