@@ -46,7 +46,15 @@
     }
 
     #nota {
+        color: #ffffff;
+        border: none;
         border-radius: 10px;
+        background-color: #3d3d3d;
+    }
+
+    #nota > option {
+        color: #ffffff;
+        background-color: #3d3d3d;
     }
 
     #adicionar {
@@ -80,6 +88,8 @@
 #videoTrailer {
     width: 40vw;
     height: 40vh;
+    border: none;
+    border-radius: 10px;
 }
 
 .semReviews {
