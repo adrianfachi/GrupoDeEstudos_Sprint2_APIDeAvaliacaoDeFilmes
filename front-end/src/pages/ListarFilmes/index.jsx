@@ -6,6 +6,7 @@ import api  from "../../services/api.js"
 import semCapa from "../../assets/semCapa.png"
 
 function ListarFilmes() {
+    window.scrollTo(0, 0);  
     const [filmes, setFilmes] = useState();
     const [pesquisaTermo, setPesquisaTermo] = useState('');
 
@@ -66,7 +67,7 @@ function ListarFilmes() {
                                         <p>• Gênero: {filme.genero}</p>
                                         <p>• Nota Média: {calcMedia(filme.reviews)}</p>
                                     </div>
-                                    <Link to={{pathname: "/review",search: `?query=${filme._id}`,}} className={styles.reviews}>Ver reviews</Link>
+                                    <Link to={{pathname: "/review",search: `?search=${filme._id}`,}} className={styles.reviews}>Ver reviews</Link>
                                 </div>
                             </div>
                             

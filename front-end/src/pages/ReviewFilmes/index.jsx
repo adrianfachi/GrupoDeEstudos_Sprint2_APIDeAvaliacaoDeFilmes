@@ -7,9 +7,10 @@ import { Link } from "react-router-dom";
 import api from '../../services/api.js'
 
 function reviewsFilmes() {
+    window.scrollTo(0, 0);
     const [searchParams, setSearchParams] = useSearchParams();
     const [filme, setFilme] = useState();
-    const query = searchParams.get('query');
+    const query = searchParams.get('search');
 
     const review = useRef();
     const nota = useRef();
